@@ -9,7 +9,8 @@ const LEN int = 1000000
 
 // Benefits of setting the capacity of your slice ahead of time
 func getPreAllocatedSlice() []int {
-	// We set the capacity here
+	// We set the capacity beforehand here
+	// It basically means a space allocation beforehand
 	var slice = make([]int, 0, LEN)
 	for len(slice) < LEN {
 		slice = append(slice, 0)
