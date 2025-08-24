@@ -49,5 +49,7 @@ func GetCoinBalance(w http.ResponseWriter, r *http.Request) {
 		log.Error(err)
 		api.InternalErrorHandler(w)
 		return
+	} else {
+		log.Info("Coin balance retrieved successfully")
 	}
 }
